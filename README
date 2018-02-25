@@ -1,0 +1,18 @@
+### Docker run mysql
+docker run --restart unless-stopped -p 3306:3306 --name mysql -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=myschema -d mysql
+
+docker run -it mysql bash
+
+mysql -uroot -proot -h localhost -P 3306
+mysql -uroot -proot -h 0.0.0.0 -P 3306
+
+
+
+
+
+### Run configuration
+
+# add spring instrument to CP on jvm with arg:
+-javaagent:C:\Users\vkara\.m2\repository\org\springframework\spring-instrument\5.0.3.RELEASE\spring-instrument-5.0.3.RELEASE.jar
+
+For jUnit, goo to Edit Configuration -> Default -> JUnit
